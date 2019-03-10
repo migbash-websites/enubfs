@@ -1,0 +1,81 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {}
+
+section {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Landing Page CSS */
+
+#landing-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('img/world_in_futuristic_lines.png');
+  background-size: contain;
+}
+
+#landing-page img {
+  width: 340px;
+  height: 85px;
+}
+
+#in-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  position: fixed;
+  bottom:0%;
+  width:100%;
+  background-color: #000000;
+  padding: 2% 0%;
+}
+
+#in-footer a img {
+  margin: 5px 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.btn {
+  background-color: yellow;
+}
+
+  .btn:hover {
+    background-color: red;
+    border: 2px 2px solid red;
+    transition: 0.2s;
+  }
+
+.active-animatioon {
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(0deg, white 50%, transparent 50%), linear-gradient(0deg, white 50%, transparent 50%);
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-size: 15px 2px, 15px 2px, 2px 15px, 2px 15px;
+    background-position: left top, right bottom, left bottom, right   top;
+    animation: border-dance 1s infinite linear;
+  }
+
+  @keyframes border-dance {
+    0% {
+      background-position: left top, right bottom, left bottom, right   top;
+    }
+    100% {
+      background-position: left 15px top, right 15px bottom , left bottom 15px , right   top 15px;
+    }
+  }
+}
