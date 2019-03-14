@@ -80,8 +80,8 @@ footer {
 }
 
 footer a img {
-  border-radius: 10px;
-  width: 3.5vw;
+  border-radius: 12px;
+  width: 3.3vw;
   height: 80%;
   margin: 0 1vw;
 }
@@ -133,8 +133,8 @@ footer a img {
   position: relative;
 }
 
-form {
-  padding-bottom: 10px;
+footer #valid-box p {
+  padding-top: 10px;
 }
 
 #input {
@@ -197,11 +197,7 @@ form {
 
   /*-- Changing Fonts --*/
 
-  .slogan-box h3 {
-    font-size: 70px;
-  }
-
-  footer h3 {
+  .slogan-box h3,   footer h3 {
     font-size: 60px;
   }
 
@@ -219,25 +215,50 @@ form {
 @media screen and (min-width : 1200px) and (max-width : 1441px) {
 
   /*-- Changing Fonts --*/
-  .slogan-box h3, footer h3 {
-    font-size: 40px;
+  .slogan-box h3 {
+    font-size: 35px;
+  }
+
+  footer h3 {
+   font-size: 30px;
   }
 
   footer p, .btn, input[type="email"], #error-box  {
-    font-size: 22.5px;
+    font-size: 16px;
   }
 
   footer #valid-box p {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
 /* Media Query >= 992px (Equal to col-lg-) */
 @media screen and (min-width : 769px) and (max-width : 1199px) {
 
+
+  footer a img {
+    width: 4.6vw;
+    height: 100%;
+  }
+
+  .feature {
+    padding: 4vh 4vw;
+  }
+
+  #member-col {
+    border-right: 0px;
+    border-left: 0px;
+    border-top: 1px white solid;
+    border-bottom: 1px white solid;
+  }
+
   /*-- Changing Fonts --*/
   footer #valid-box p {
     font-size: 12px;
+  }
+
+  footer {
+    position: relative;
   }
 
 }
@@ -247,6 +268,17 @@ form {
 
   .feature {
     padding: 4vh 4vw;
+  }
+
+  .slogan-box h3 {
+    text-align: center;
+    padding: 4vh 0vh;
+  }
+
+  .logo-box {
+    border-right: 0px;
+    border-bottom: 3px grey solid;
+    padding: 4vh 0vh;
   }
 
   footer a img {
