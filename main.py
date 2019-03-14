@@ -19,10 +19,10 @@ def subscribed():
     target_db = mongo.db.email_subscriptions
     email_check = target_db.find_one({'email': email_txt})          # Email Validation
     if email_check:
-        return jsonify({'error':'Uh-oh..email already in use'})     # Email Duplicate Error Message
+        return jsonify({'error':'Oops! Email already in use'})     # Email Duplicate Error Message
     else:
         target_db.insert({'email': email_txt})
-        return jsonify({'success':'Success! Your are Subscribed'})  # Email Correct
+        return jsonify({'success':'Success! You are Subscribed'})   # Email Correct
 
 if __name__ == '__main__':
     app.run(debug=True, port=8080)

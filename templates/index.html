@@ -14,8 +14,11 @@
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
 
@@ -52,22 +55,23 @@
       <div class="row text-center text-white">
 
         <!-- Email List Subscription -->
-        <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="feature col-lg-4 col-md-12 col-sm-12">
           <h3> Subscribe </h3>
           <p> Receive updates, event invitations & special offers </p>
           <div id="valid-box" class="container-fluid">
             <form class="input-group">
-              <input id="input" name="email" type="email" class="form-control" placeholder="E-mail Address">
-              <button id="subscibe_btn" type="submit" class="btn btn-default">Subscribe!</button>
+              <div id="error-box" class="form-control"></div>
+              <input id="input" name="email" type="email" class="form-control" placeholder="E-mail Address" required>
+              <button id="subscibe_btn" type="submit" class="btn btn-default"> Subscribe! </button>
+              <div id="error-icon" class="btn btn-default"> <i class="fas fa-exclamation-circle fa-1x"></i> </div>
+              <div id="success-icon" class="btn btn-default"> <i class="fas fa-check-circle fa-1x"></i></i> </div>
             </form>
-            <div id="error-box">
-            </div>
             <p> (We will not use your emails outside of our society) </p>
           </div>
         </div>
 
         <!-- MemberShip Link -->
-        <div id="member-col" class="col-lg-4 col-md-4 col-sm-4">
+        <div id="member-col" class="feature col-lg-4 col-md-12 col-sm-12">
           <h3> Become a Member </h3>
           <p> Join & support our society by purchasing our membership </p>
           <div class="container-fluid">
@@ -78,7 +82,7 @@
         </div>
 
         <!-- Social Media Icons Box -->
-        <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="feature col-lg-4 col-md-12 col-sm-12">
           <h3> Social Media </h3>
           <p> Stay up-to-date with us on social media and
             be part of the society
@@ -102,13 +106,13 @@
     <!-- Footer with Key Info -->
     <div id="key-info-foot" class="container-fluid">
       <div class="row text-center text-black">
-        <div class="col-lg-4 col-md-4 col-sm-4">
-          <p> Get in touch: contactus@napierfintech.com </p>
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <p> Email Us! 24/7 contactus@napierfintech.com </p>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="col-lg-4 col-md-4 col-sm-12">
           <p> We are open to sponsors </p>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="col-lg-4 col-md-4 col-sm-12">
           <p> Official Website Coming Soon </p>
         </div>
       </div>
@@ -119,8 +123,6 @@
 
   {% endblock %}
 
-  <!-- Scripts -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script> -->
   <!-- <script src = "https://code.jquery.com/jquery-1.10.2.js"></script> -->
   <!-- <script src = "https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
