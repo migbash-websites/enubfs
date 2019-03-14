@@ -81,8 +81,8 @@ footer {
 
 footer a img {
   border-radius: 12px;
-  width: 3.3vw;
-  height: 80%;
+  width: 3vw;
+  height: 85%;
   margin: 0 1vw;
 }
 
@@ -197,16 +197,16 @@ footer #valid-box p {
 
   /*-- Changing Fonts --*/
 
-  .slogan-box h3,   footer h3 {
-    font-size: 60px;
+  .slogan-box h3, footer h3 {
+    font-size: 35px;
   }
 
   footer p, .btn, input[type="email"], #error-box  {
-    font-size: 40px;
+    font-size: 20px;
   }
 
   footer #valid-box p {
-    font-size: 25px;
+    font-size: 18px;
   }
 
 }
