@@ -3,16 +3,18 @@ from flask_pymongo import PyMongo
 import dns
 
 app = Flask(__name__)
-app.config['MONGO_DBNAME'] = 'enubfs_data'
-app.config['MONGO_URI'] = 'mongodb+srv://mhashX:EeAuDKtDeUZV8x00@enubfs-ak8by.mongodb.net/enubfs_data'
+app.config['MONGO_DBNAME'] = ''
+app.config['MONGO_URI'] = ''
 mongo = PyMongo(app)
 
 # ------- Main Page -------
+
 @app.route('/')
 def index():
     return render_template('index.html')
 
 # ------- Sending Subscription User Data to MongoDB Atlas -------
+
 @app.route('/subscribed', methods=['GET','POST'])
 def subscribed():
     email_txt = request.form['email']
@@ -25,4 +27,4 @@ def subscribed():
         return jsonify({'success':'Success! You are Subscribed'})   # Email Correct
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8080)
+    app.run(debug=True)
