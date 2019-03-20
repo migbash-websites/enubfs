@@ -261,13 +261,6 @@ footer #valid-box p {
     padding: 4vh 4vw;
   }
 
-  #member-col {
-    border-right: 0px;
-    border-left: 0px;
-    border-top: 1px white solid;
-    border-bottom: 1px white solid;
-  }
-
   /*-- Changing Fonts --*/
   footer #valid-box p {
     font-size: 12px;

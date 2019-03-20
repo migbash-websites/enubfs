@@ -4,11 +4,16 @@ from flask_mail import Mail, Message
 import dns
 
 app = Flask(__name__)
+<<<<<<< HEAD
 
 # ------- MongoDB configuration --------
 app.config['MONGO_DBNAME'] = 'enubfs_data'
 app.config['MONGO_URI'] = 'mongodb+srv://mhashX:EeAuDKtDeUZV8x00@enubfs-ak8by.mongodb.net/enubfs_data'
 
+=======
+app.config['MONGO_DBNAME'] = ''
+app.config['MONGO_URI'] = ''
+>>>>>>> c5627e79056c982f6788ac071f310ec7a1295571
 mongo = PyMongo(app)
 
 # ------- FLask_Mail Config -------
@@ -22,11 +27,13 @@ app.config['MAIL_PASSWORD'] = 'bitcoin4life!'
 mail = Mail(app)
 
 # ------- Main Page -------
+
 @app.route('/')
 def index():
     return render_template('index.html')
 
 # ------- Sending Subscription User Data to MongoDB Atlas -------
+
 @app.route('/subscribed', methods=['GET','POST'])
 def subscribed():
     email_txt = request.form['email']
@@ -52,4 +59,4 @@ def email():
     return "Success"
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8080)
+    app.run(debug=True)
