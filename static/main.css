@@ -22,7 +22,7 @@ section {
 
 /* ---- CSS for Vertical Aligment ---- */
 
-section, footer, .slogan-box, .logo-box {
+section, footer, .slogan-box, .logo-box, #arrow-down {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,7 +30,7 @@ section, footer, .slogan-box, .logo-box {
 
 /* ---- CSS for transitions ---- */
 
-.btn, footer a img  {
+.btn, footer a img, #arrow-down i  {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -38,6 +38,13 @@ section, footer, .slogan-box, .logo-box {
 }
 
 /* ---- Incresing Elements Size ---- */
+
+#arrow-down i:hover {
+  color: red;
+  transform:scale(1.3,1.3);
+  -webkit-transform:scale(1.3,1.3);
+  -moz-transform:scale(1.3,1.3);
+}
 
 footer a img:hover {
   border: 1.5px solid white;
@@ -68,11 +75,20 @@ footer a img:hover {
   border-right: 5px solid black;
 }
 
+#arrow-down {
+  position: absolute;
+  bottom: 10px;
+}
+
+#arrow-down i {
+  color: black;
+}
+
 /* ---- General Footer CSS ---- */
 
 footer {
   height: auto;
-  position: fixed;
+  position: relative;
   bottom: 0%;
   width: 100%;
   padding: 2vh 0 6vh 0;
@@ -86,7 +102,7 @@ footer a img {
   margin: 0 1vw;
 }
 
-/* Footer Features */
+/* ---- Footer Features ---- */
 
 #member-col {
   border-right: 1.5px solid white;
@@ -161,7 +177,7 @@ footer #valid-box p {
 .success {
   background-color: #3AFF00;
   border: 1px solid #3AFF00;
-  color: #000000;
+  color: #FFFFFF;
 }
 
 #success-icon {
@@ -224,7 +240,7 @@ footer #valid-box p {
   }
 
   footer p, .btn, input[type="email"], #error-box  {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   footer #valid-box p {
@@ -257,10 +273,6 @@ footer #valid-box p {
     font-size: 12px;
   }
 
-  footer {
-    position: relative;
-  }
-
 }
 
 /* Media Query >= 768px (Equal to col-md-) */
@@ -291,10 +303,6 @@ footer #valid-box p {
     border-left: 0px;
     border-top: 1px white solid;
     border-bottom: 1px white solid;
-  }
-
-  footer {
-    position: relative;
   }
 
 }
@@ -334,10 +342,6 @@ footer #valid-box p {
     border-left: 0px;
     border-top: 1px white solid;
     border-bottom: 1px white solid;
-  }
-
-  footer {
-    position: relative;
   }
 
 }

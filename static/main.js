@@ -21,11 +21,13 @@ $(document).ready(function() {
         $('#subscibe_btn').toggle();
         // ---- Validating Input ----
         if (data.error) {
-          // Show the error icon
+
+          // ------- Show the error icon
           $('#error-icon').css({
             'width': ($('#subscibe_btn').outerWidth())
           }).toggle();
-          //Error Effect (Shake)
+
+          // ------- Error Effect (Shake)
           $(function() {
             var l = 20;
 
@@ -42,7 +44,7 @@ $(document).ready(function() {
             }
           });
 
-          // Success Process
+          // ------- Error Visiual
           $('#error-box').addClass("error").css({
             'width': ($('input').outerWidth())
           }).animate({
@@ -59,15 +61,14 @@ $(document).ready(function() {
               $('#error-icon').toggle();
             });
           });
-        } else {
-          // Success Message
+        } else {  // ---------- Success
 
-          // Show the error icon
+          // ------- Show the error icon
           $('#success-icon').css({
             'width': ($('#subscibe_btn').outerWidth())
           }).toggle();
 
-          // Success Process
+          // ------- Success Process
           $('#error-box').addClass("success").css({
             'width': ($('input').outerWidth())
           }).animate({
@@ -84,6 +85,15 @@ $(document).ready(function() {
               $('#success-icon').toggle();
             });
           });
+
+          // ------- Ajax Email Handling
+          $.ajax({
+            url: '/email',
+            type: 'POST',
+            data: {
+              email: $('#input').val()
+            }
+          })
         }
       });
     // Remove Temporary Used Configurations
