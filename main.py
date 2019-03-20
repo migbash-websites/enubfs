@@ -3,8 +3,8 @@ from flask_pymongo import PyMongo
 import dns
 
 app = Flask(__name__)
-app.config['MONGO_DBNAME'] = ''
-app.config['MONGO_URI'] = ''
+app.config['MONGO_DBNAME'] = 'enubfs_data'
+app.config['MONGO_URI'] = 'mongodb+srv://mhashX:EeAuDKtDeUZV8x00@enubfs-ak8by.mongodb.net/enubfs_data'
 mongo = PyMongo(app)
 
 # ------- Main Page -------
