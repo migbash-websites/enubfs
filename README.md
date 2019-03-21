@@ -12,10 +12,19 @@ This repository currently holds the:
 
 Here you will find the source code for our main webpage, on which you can view our: 
 
-- Social Media,
+- Social Media Links,
 - Join Society Link,
-- And a fully functional e-mail subscription function, so you would not miss a thing!
+- Fully functional e-mail subscription function, so you would not miss a thing!
+- Email welcome on "subscribe" to the newsletter.
 
 We are aiming to exapnd our society to the fullest and get as many people as we can into our society.
 
 Keep visiting our website, as we will be including more features in the upcoming future that will make it the go-to place for Fintech & Blockchain Upcoming Events / Discussions & Special Offers in Scotland!
+
+# Requierments:
+--
+- Flask_Mail
+- Flask / Jinja2
+- Flask_Pymongo
+- DNS
+- 
