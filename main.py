@@ -6,8 +6,8 @@ import dns
 app = Flask(__name__)
 
 # ------- MongoDB configuration --------
-app.config['MONGO_DBNAME'] = 'enubfs_data'
-app.config['MONGO_URI'] = 'mongodb+srv://mhashX:EeAuDKtDeUZV8x00@enubfs-ak8by.mongodb.net/enubfs_data'
+app.config['MONGO_DBNAME'] = ''
+app.config['MONGO_URI'] = ''
 
 mongo = PyMongo(app)
 
@@ -16,8 +16,8 @@ app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USE_SSL'] = True
 app.config['MAIL_USE_TLS'] = False
-app.config['MAIL_USERNAME'] = 'napierblockchain@gmail.com'
-app.config['MAIL_PASSWORD'] = 'bitcoin4life!'
+app.config['MAIL_USERNAME'] = ''
+app.config['MAIL_PASSWORD'] = ''
 
 mail = Mail(app)
 
