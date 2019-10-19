@@ -10,8 +10,13 @@ from instance.config import mongo_dbname, mongo_uri, email, password
 app = Flask(__name__)
 
 # ------- MongoDB configuration --------
+<<<<<<< HEAD:app.py
 app.config['MONGO_DBNAME'] = mongo_dbname
 app.config['MONGO_URI'] = mongo_uri
+=======
+app.config['MONGO_DBNAME'] = ''
+app.config['MONGO_URI'] = ''
+>>>>>>> 67886a388b582ecfefe45f0b7a84a287377c4fc8:main.py
 
 mongo = PyMongo(app)
 
@@ -20,8 +25,13 @@ app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USE_SSL'] = True
 app.config['MAIL_USE_TLS'] = False
+<<<<<<< HEAD:app.py
 app.config['MAIL_USERNAME'] = email
 app.config['MAIL_PASSWORD'] = password
+=======
+app.config['MAIL_USERNAME'] = ''
+app.config['MAIL_PASSWORD'] = ''
+>>>>>>> 67886a388b582ecfefe45f0b7a84a287377c4fc8:main.py
 
 mail = Mail(app)
 
