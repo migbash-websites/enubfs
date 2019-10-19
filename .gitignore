@@ -1,2 +1,4 @@
 # sensitive data
 instance/
+Pipfile
+Procfile
