@@ -1,0 +1,13 @@
+-i https://pypi.org/simple
+blinker==1.4
+click==7.0
+dnspython==1.16.0
+flask-mail==0.9.1
+flask-pymongo==2.3.0
+flask==1.1.1
+gunicorn==19.9.0
+itsdangerous==1.1.0
+jinja2==2.10.3
+markupsafe==1.1.1
+pymongo==3.9.0
+werkzeug==0.16.0
